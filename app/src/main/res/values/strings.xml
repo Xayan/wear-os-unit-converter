@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+
+    <string name="conversion_type_button_text_default">Weight</string>
+    <string name="conversion_type_button_hint">Conversion type</string>
+
+    <string name="convert_from_input_text_default">1.0</string>
+    <string name="convert_from_input_hint">Input</string>
+
+    <string name="convert_from_button_text_default">kg</string>
+    <string name="convert_from_button_hint">Unit to convert from</string>
+
+    <string name="convert_to_input_text_default">35.274</string>
+    <string name="convert_to_input_hint">Result</string>
+
+    <string name="convert_to_button_text_default">oz</string>
+    <string name="convert_to_button_hint">Unit to convert to</string>
+
+    <string name="swap_units_button_text">⇄</string>
+    <string name="swap_units_button_hint">Swap units</string>
+</resources>
