@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:padding="@dimen/box_inset_layout_padding">
 
     <LinearLayout
@@ -21,6 +22,7 @@
             android:text="@string/conversion_type_button_text_default"
             android:textAlignment="center"
             android:textColor="@color/basic_button_fg"
+            android:textFontWeight="700"
             android:textSize="@dimen/basic_button_text_size" />
 
         <EditText
@@ -50,11 +52,12 @@
                 android:layout_marginHorizontal="@dimen/linear_layout_horizontal_margin"
                 android:background="@drawable/round_button"
                 android:hint="@string/convert_from_button_hint"
-                android:onClick="changeConversionType"
+                android:onClick="changeFromUnit"
                 android:text="@string/convert_from_button_text_default"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/basic_button_fg"
+                android:textFontWeight="700"
                 android:textSize="@dimen/basic_button_text_size" />
 
             <Button
@@ -65,7 +68,9 @@
                 android:background="@drawable/round_button"
                 android:hint="@string/swap_units_button_hint"
                 android:text="@string/swap_units_button_text"
+                android:onClick="swapUnits"
                 android:textColor="@color/basic_button_fg"
+                android:textFontWeight="700"
                 android:textSize="@dimen/basic_button_text_size" />
 
             <Button
@@ -76,22 +81,23 @@
                 android:layout_marginHorizontal="@dimen/linear_layout_horizontal_margin"
                 android:background="@drawable/round_button"
                 android:hint="@string/convert_to_button_hint"
-                android:onClick="changeConversionType"
+                android:onClick="changeToUnit"
                 android:text="@string/convert_to_button_text_default"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/basic_button_fg"
+                android:textFontWeight="700"
                 android:textSize="@dimen/basic_button_text_size" />
         </RelativeLayout>
 
-        <EditText
+        <TextView
             android:id="@+id/convert_to_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/linear_layout_vertical_margin"
             android:hint="@string/convert_from_input_hint"
             android:importantForAutofill="no"
-            android:inputType="numberDecimal"
+            android:paddingHorizontal="4dp"
             android:paddingVertical="@dimen/basic_input_padding_vertical"
             android:text="@string/convert_from_input_text_default"
             android:textAlignment="textEnd"

@@ -8,6 +8,10 @@ import pl.xayan.wearos.unitconverter.unit.WeightUnit;
 public interface Converter {
     Number convert(Unit unitFrom, Number value, Unit unitTo);
 
+    Unit getDefaultFromUnit();
+
+    Unit getDefaultToUnit();
+
     default void validateInput(Unit unitFrom, Number value, Unit unitTo) {
         validateUnitFrom(unitFrom);
         validateValue(value);
@@ -44,5 +48,15 @@ public interface Converter {
 
     default Class<? extends Unit> getSupportedUnitEnum() {
         return getConfiguration().unitEnum();
+    }
+
+    default Unit getUnitByName(String name) {
+        try {
+            Unit[] units = (Unit[]) getSupportedUnitEnum().getMethod("values").invoke(this);
+
+            return null;
+        } catch (Exception ignored) {}
+
+        return null;
     }
 }

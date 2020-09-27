@@ -13,11 +13,19 @@ public class WeightConverter implements Converter {
     public Number convert(Unit unitFrom, Number value, Unit unitTo) {
         validateInput(unitFrom, value, unitTo);
 
-        return convert((WeightUnit) unitFrom, value, (WeightUnit) unitTo);
+        val weightUnitFrom = (WeightUnit) unitFrom;
+        val weightUnitTo = (WeightUnit) unitTo;
+
+        return value.doubleValue() * weightUnitFrom.ratio.doubleValue() / weightUnitTo.ratio.doubleValue();
     }
 
-    @NonNull
-    private Number convert(WeightUnit unitFrom, Number value, WeightUnit unitTo) {
-        return value.doubleValue() * unitFrom.ratio.doubleValue() / unitTo.ratio.doubleValue();
+    @Override
+    public Unit getDefaultFromUnit() {
+        return WeightUnit.KILOGRAM;
+    }
+
+    @Override
+    public Unit getDefaultToUnit() {
+        return WeightUnit.GRAM;
     }
 }
