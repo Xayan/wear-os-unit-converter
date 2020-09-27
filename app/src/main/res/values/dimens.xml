@@ -5,7 +5,7 @@
     <dimen name="linear_layout_vertical_margin">4dp</dimen>
     <dimen name="linear_layout_horizontal_margin">0dp</dimen>
 
-    <dimen name="basic_button_height">24dp</dimen>
+    <dimen name="basic_button_height">20dp</dimen>
     <dimen name="basic_button_text_size">12sp</dimen>
 
     <dimen name="basic_input_padding_vertical">8dp</dimen>
